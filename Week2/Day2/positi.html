@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pos</title>
+        <style>
+            /* static: All the html elements are considered to be static */
+            /* relative: Its similar to static. But when you change its position by top bottom it changes its position reltive to its parent */
+            /* absolute: Its similar to relative but changes happens to its by dependinding on html body */
+            /* fixed: fixed makes the elemt fixed to the position where its defined */
+
+            .parent{
+                background-color: blue;
+                padding: 20px;
+                height: 200vh;
+                position: static;
+                top: 0;
+            }
+            .child-one{
+                background-color: teal;
+                position: fixed;
+            }
+            .child-two{
+                background-color: tomato;
+                position: relative;
+            }
+            .child-three{
+                background-color: yellow;
+                position: absolute;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="parent">
+            <div class="child-one"> Child one</div>
+            <div class="child-two">Child Two</div>
+            <div class="child-three">Child Three</div>
+        </div>
+    </body>
+</html>
