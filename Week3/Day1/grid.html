@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Grid</title>
+        <style>
+            body{
+                background-color: rgb(43, 41, 41);
+            }
+            .grid-container{
+                background-color: yellow;
+                padding: 5px;
+                display: grid;
+                grid-template-columns: repeat(6, 1fr);
+                height: 750px;
+            }
+            .item{
+                background-color: #fff;
+                border: 1px solid black;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="grid-container">
+            <div class="item">
+                item 1
+            </div>
+            <div class="item">
+                item 2
+            </div>
+            <div class="item">
+                item 3
+            </div>
+            <div class="item">
+                item 1
+            </div>
+            <div class="item">
+                item 2
+            </div>
+            <div class="item">
+                item 3
+            </div>
+        </div>
+    </body>
+</html>
