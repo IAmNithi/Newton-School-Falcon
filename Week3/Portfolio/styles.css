@@ -1,0 +1,126 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #eee;
+}
+.portfolio-container{
+    display: flex;
+    flex-direction: row;
+    margin: 0 10%;
+}
+
+.aside-container{
+    width: 30%;
+    height: 100vh;
+    background-color: #155e91;
+    color: #ffffff;
+}
+
+.section-container{
+    width: 70%;
+    height: 100vh;
+    background-color: #ffffff;
+}
+@media only screen and (max-width: 850px){
+    .portfolio-container{
+        margin: 0;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .portfolio-container{
+        flex-direction: column;
+    }
+    .aside-container{
+        width: 100%;
+        min-height: 30vh;
+    }
+    
+    .section-container{
+        width: 100%;
+        height: 70vh;
+    }
+}
+
+.side-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.image-holder{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid #fff;
+    margin: 10px auto;
+}
+.img{
+    height: 100%;
+}
+.tec-stack{
+    margin: 10px 10px;
+    border-top: 2px solid white;
+}
+.heading{
+    text-align: center;
+    font-size: 16px;
+}
+ul{
+    list-style: none;
+    padding: 0;
+}
+ul > li {
+    display: inline-block;
+    background-color: #3e98d7;
+    margin: 3px;
+    padding: 4px;
+    border-radius: 5px;
+}
+.edu-container{
+    margin: 10px 10px;
+    border-top: 2px solid white;
+}
+.edu{
+    margin: 5px 0;
+}
+.edu > h6{
+    font-size: 16px;
+    margin: 2px 0;
+}
+.edu > p{
+    font-size: 10px;
+    margin: 0;
+}
+
+.sec-overview{
+    display: flex;
+    flex-direction: column;
+}
+.header{
+    margin: 5px 10px;
+}
+.header > h1{
+    font-size: 32px;
+    margin: 2px 0;
+}
+.header > p{
+    font-size: 16px;
+    margin: 2px 0;
+    color: #155e91;
+    font-weight: 600;
+}
+.experience{
+    margin: 10px 5px;
+    border-top: 2px solid #eee ;
+}
+.edu-type > h3{
+    font-size: 22px;
+    margin: 2px;
+}
+.edu-type > p{
+    font-size: 16px;
+    margin: 2px;
+}
