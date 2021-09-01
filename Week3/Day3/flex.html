@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Intro to flex</title>
+        <meta name="description" content="Hello World Application">
+        <meta name="author" content="Kalanithi Sethuraman">
+        <meta name="keyword" content="Javscript, HTML, CSS">
+        <link rel="icon" href="https://my.newtonschool.co/favicon.ico">
+        <style>
+            body{
+                margin: 0;
+                padding: 0;
+                background-color: black;
+            }
+            .container{
+                background-color: yellow;
+                padding: 10px;
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: center;
+                height: 500px;
+            }
+            @media only screen and (max-width: 750px) {
+                .container{
+                    flex-direction: column;
+                }
+            }
+            .container > div {
+                border: 1px solid black;
+                padding: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div>Div 1</div>
+            <div>Div 2</div>
+        </div>
+    </body>
+</html>
