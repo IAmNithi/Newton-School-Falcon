@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            // 'this'
+
+            // JavaScript by default will have 'this' and 'window' object
+
+            // method ---> object
+            // function ---> (window, global)
+
+
+            // if you call 'this' keyword inside a function it always refers to global object
+
+            // if you call 'this' keyword inside objects method it always returns the object reference 
+
+
+            function video(){
+                console.log(this);
+            }
+
+            video();
+
+            // this inside a object
+            let obj = {
+                a: 10,
+                video() {
+                    console.log(this);
+                }
+            }
+
+
+            obj.video();
+
+            // converting a function to object reference
+
+            function hello(title){
+                this.title = title;
+                console.log(this);
+            }
+
+            const v = new hello('world');
+        </script>
+    </body>
+</html>
