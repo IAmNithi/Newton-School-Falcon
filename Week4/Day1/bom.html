@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+
+        <h1>Welcome to my Site</h1>
+        <script>
+            // BOM 
+
+
+            
+            console.log(window.innerWidth);
+            console.log(window.innerHeight);
+
+
+            console.log(window.location.href);
+            console.log(window.location.hostname);
+            console.log(window.location.pathname);
+            console.log(window.location.protocol);
+
+            window.localStorage.setItem("userLogedIn", "yes");
+
+            var a = window.localStorage.getItem("userLogedIn");
+            console.log(a); 
+
+            if(a == "yes") {
+                alert('user is logged in');
+            } else {
+                alert('user is not logged in');
+            }
+
+
+        </script>
+    </body>
+</html>
+
+

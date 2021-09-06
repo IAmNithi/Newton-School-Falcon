@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calculator</title>
+    </head>
+    <body>
+        Number 1: <input type="number" id="number1" /><br/>
+
+        Number 2: <input type="number" id="number2" /><br/>
+
+        <button onclick="addition()">Calculate</button><br/>
+
+        <h5>Result: <span id="result"></span></h5>
+
+        <script>
+            function addition(){
+                var a = document.getElementById("number1").value;
+                var b = document.getElementById("number2").value;
+                document.getElementById("result").innerHTML = parseInt(a) * parseInt(b);
+            }
+        </script>
+
+    </body>
+</html>

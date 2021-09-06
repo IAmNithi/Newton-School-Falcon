@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+
+        <h1 class="message" id="msg">Welcome to My Site</h1>
+        <h1 class="message">Message 2</h1>
+        <button onclick="changeColor()">Counter</button>
+        
+        <script>
+            // DOM
+
+            function changeColor(){
+                document.getElementById("msg").innerHTML = "Kalanithi";
+                document.getElementsByClassName("message")[0].style.fontfamily = 'Arial';
+                document.getElementsByTagName("h1")[1].style.color = 'blue' ;
+            }
+
+        </script>
+    </body>
+</html>
+
+
