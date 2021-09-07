@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<input id="demo" type="text">
+<button type="button" onclick="myFunction()">Test Input</button>
+<p id="p01"></p>
+
+<script>
+    function myFunction() {
+        const message = document.getElementById("p01");
+        message.innerHTML = "";
+        let x = document.getElementById("demo").value;
+        try {
+            if(x == "") throw "bla bla";
+        }
+        catch(err) {
+            message.innerHTML = err;
+        }
+    }
+</script>
+
+</body>
+</html>

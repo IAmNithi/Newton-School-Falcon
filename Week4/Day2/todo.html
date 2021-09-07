@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Todo</title>
+        <style>
+            body{
+                background-color: #eee;
+            }
+            .todo-container{
+                background-color: white;
+                width: 50%;
+                padding: 10px;
+                text-align: center;
+                margin: 0 auto;
+            }
+            .button{
+                background-color: #4CAF50; /* Green */
+                border: none;
+                color: white;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                cursor: pointer;
+            }
+            input[type=text] {
+                width: 100%;
+                padding: 12px 20px;
+                margin: 8px 0;
+                display: inline-block;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+            }
+            ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+            }
+            li{
+                padding: 5px;
+                border: 1px solid #000;
+                margin: 6px;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <div class="todo-container">
+            <div>
+                <input type="text" placeholder="Enter Todo List" id="input"/>
+            </div>
+            <div>
+                <button class="button" onclick="addTodo()">Add Todo</button>
+            </div>
+            <div class="list-box">
+                <ul>
+                    
+                </ul>
+            </div>
+
+        </div>
+        <script>
+            function addTodo(){
+                const inputText = document.getElementById("input").value;
+
+                try {
+                    if(inputText == ""){
+                        throw 'Input box is Empty'
+                    } else {
+                         // it creates a <li></li>
+                        const list = document.createElement("li");   
+
+                        // it created a text hello 
+                        const text = document.createTextNode(inputText); 
+
+                        // it will appent the hello text to li <li>Hello</li> 
+                        list.appendChild(text);  
+
+                        // fetching the ul which is created by HTML
+                        const unorderList = document.getElementsByTagName('ul')[0];
+
+                        // it will appent the hello li to ul  <ul><li>Hello</li></ul>
+                        unorderList.appendChild(list);
+
+                        document.getElementById("input").value = '';
+                    }
+                } catch(error) {
+                    alert(error);
+                }
+               
+            }
+        </script>
+    </body>
+</html>

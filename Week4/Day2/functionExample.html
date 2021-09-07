@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>function example</title>
+    </head>
+    <body>
+        <h1 id="heading">hello</h1>
+        <button onclick="alertMe()">Click me</button>
+
+        <script>
+            if(window.localStorage.getItem('background') == undefined) {    
+                window.localStorage.setItem('background', 'light');
+            }
+            let theme = window.localStorage.getItem('background');
+            function alertMe(){
+                if(theme === 'light') {
+                    document.getElementsByTagName("body")[0].style.backgroundColor = "black";
+                    document.getElementsByTagName("body")[0].style.color = "white";
+                    window.localStorage.setItem('background', 'dark');
+                } else {
+                    document.getElementsByTagName("body")[0].style.backgroundColor = "white";
+                    document.getElementsByTagName("body")[0].style.color = "black";
+                }
+            } 
+
+        </script>
+
+    </body>
+</html>

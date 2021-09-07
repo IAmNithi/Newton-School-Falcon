@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Todo</title>
+    </head>
+    <body>
+        <h1>Welcome to my Site</h1>
+
+        <div>
+
+        </div>
+
+        <script>
+
+            function apiCall(){
+                // for creating a http request
+                const http = new XMLHttpRequest;
+                const url = "https://jsonplaceholder.typicode.com/todos/1";
+                http.open('GET', url);
+                http.send();
+
+                // this is to parse the api response 
+                http.onreadystatechange = function(){
+                    if(this.readyState == 4 && this.status == 200){
+                        console.log(http.responseText);
+                    }
+                }
+            }
+
+            apiCall();
+
+        </script>
+    </body>
+</html>
