@@ -70,16 +70,16 @@
                         throw 'Input box is Empty'
                     } else {
                          // it creates a <li></li>
-                        const list = document.createElement("li");   
+                        var list = document.createElement("li");   
 
                         // it created a text hello 
-                        const text = document.createTextNode(inputText); 
+                        var text = document.createTextNode(inputText); 
 
                         // it will appent the hello text to li <li>Hello</li> 
                         list.appendChild(text);  
 
                         // fetching the ul which is created by HTML
-                        const unorderList = document.getElementsByTagName('ul')[0];
+                        var unorderList = document.getElementsByTagName('ul')[0];
 
                         // it will appent the hello li to ul  <ul><li>Hello</li></ul>
                         unorderList.appendChild(list);
