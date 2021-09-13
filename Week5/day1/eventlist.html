@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Event Emiter and Listener
+        </title>
+        <style>
+            .box{
+                background-color: #eee;
+                height: 250px;
+                width: 250px;
+                margin-bottom: 10px;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div id="box" class="box">
+            <h1 id="height"></h1>
+        </div>
+
+        <div class="box" class="box">
+            box 2
+        </div>
+
+        <script>
+            // action is performed event is dispatched
+            const greyBox = document.getElementById('box');
+
+            function messageFunc(){
+                console.log('mouse entered the grey box');
+            }
+
+            function messageFunc2(){
+                console.log('mouse leaves the grey box');
+            }
+
+            function printWindowHeight(){
+                document.getElementById('height').innerHTML = `width: ${window.innerWidth} and height: ${window.innerHeight}`;
+                document.getElementsByClassName('box')[1].style.backgroundColor = 'blue';
+            }
+            
+            // greyBox.addEventListener('mouseenter', messageFunc);
+            // greyBox.addEventListener('mouseleave', messageFunc2);
+            window.addEventListener('resize', printWindowHeight);
+        </script>
+    </body>
+</html>

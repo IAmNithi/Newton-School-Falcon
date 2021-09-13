@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dom Events</title>
+        <!-- CSS only -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    </head>
+    <body class="bg-dark">
+
+        <div class="container mt-4">
+            <div class="row" id="row">
+                
+            </div>
+        </div>
+
+        <!-- JavaScript Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+        <script>
+            let userData = [];
+
+            (function(){
+                fetch('https://jsonplaceholder.typicode.com/comments')
+                .then(response => response.json())
+                .then(json => {
+                    userData = json;
+                    createUI();
+                })
+
+            })();
+            
+            function createUI(){
+                let parent = document.getElementById('row');
+                userData.forEach((element) => {
+                    let tempHtml = `<div class="col-md-4">
+                                    <div class="card">
+                                        <div class="card-body">
+                                        <h5 class="card-title">${element.email}</h5>
+                                        <p class="card-text">${element.body}</p>
+                                        </div>
+                                    </div>
+                                    </div>`
+                    parent.insertAdjacentHTML('beforeend', tempHtml);                
+                })
+            }
+
+        </script>
+    </body>
+</html>

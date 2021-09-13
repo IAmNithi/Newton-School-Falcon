@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dom Events</title>
+        <style>
+            .box{
+                height: 500px;
+                width: 500px;
+                border: 2px solid #eee;
+                text-align: center;
+                background: black;
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div id="box" class="box">
+            box
+        </div>
+
+        <h1 id="heading"></h1>
+
+        <script>
+            function enter(){
+                console.log('mouse enter');
+            }
+
+            function mouseOver(){
+                console.log('mouse Over');
+            }
+
+            function mouseLeave(){
+                console.log('mouse leave');
+            }
+
+            const child = document.getElementById('box');
+
+            // child.addEventListener('mouseenter', enter);
+            // child.addEventListener('mouseover', mouseOver);
+            child.addEventListener('mouseleave', mouseLeave);
+
+
+            function screenSize(){
+                document.getElementById('heading').innerHTML = window.innerWidth;
+            }
+
+            window.addEventListener('resize', screenSize)
+
+        </script>
+    </body>
+</html>
