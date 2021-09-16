@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Facebook</title>
+    </head>
+    <body>
+        <h1>Welcome to Facebook.com!!!</h1>
+
+
+        <script>
+            const url = 'https://jsonplaceholder.typicode.com/users';
+            let dataArray = [];
+
+            fetch(url)
+            .then( response => response.json() )
+            .then( data => {
+                dataArray = data;
+                console.log('printing data array',  dataArray);
+            })
+        </script>
+
+    </body>
+</html>
