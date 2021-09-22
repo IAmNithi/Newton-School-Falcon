@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Higher Order Functions</title>
+    </head>
+    <body>
+        <script>
+// Functions that operate on other functions, either by taking them as arguments or by 
+//returning them, are called higher-order functions.
+
+    var array1 = [
+        {'id': 2, 'name': 'Kalanithi', 'age': 29, 'Work': 'Engineer'},
+        {'id': 4, 'name': 'John', 'age': 35, 'Work': 'Contractor'},
+        {'id': 3, 'name': 'Abhi', 'age': 20, 'Work': 'Engineer'},
+        {'id': 1, 'name': 'Sachin', 'age': 40, 'Work': 'Player'}
+    ];
+
+    // for(var i=0; i<array1.length; i++){
+    //     console.log(array1[i]);
+    // }
+
+    // forEach Method
+
+    array1.forEach((value) => {
+        console.log(value);
+    })
+
+    // filter Method
+    
+    var array2 = array1.filter((value) => {
+        return value.age < 30
+    })
+
+    console.log(array1);
+    console.log(array2);
+
+    // map Function
+
+    var users = array1.map((values) => {
+        return values.name;
+    })
+
+    console.log(array1);
+    console.log(users);
+
+    // sort 
+
+    
+    var number = [3,6,4,9,5,1]; 
+
+        var sortedArray = number.sort((a,b) => {
+            if(a > b){
+                return 1
+            } else {
+                return -1
+            }
+            return b - a
+        })
+
+        console.log(sortedArray);
+
+
+        </script>
+    </body>
+</html>

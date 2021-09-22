@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Event Propogation
+        </title>
+        <style>
+            body{
+                margin: 0;
+            }
+            .top-container{
+                text-align: center;
+                background-color: #eee;
+                display: flex;
+                flex-direction: column;
+                height: 100vh;
+                justify-content: center;
+                align-items: center;
+            }
+            #container-1{
+                background-color: #fff;
+                border: 1px solid black;
+                padding: 50px;
+            }
+            #container-2{
+                background-color: #fff;
+                border: 1px solid black;
+                padding: 50px;
+            }
+            #container-3{
+                background-color: #fff;
+                border: 1px solid black;
+                padding: 50px;
+            }
+            #container-1:hover{
+                background-color: #e2e2e2;
+            }
+            #container-2:hover{
+                background-color: #b3afaf;
+            }
+            #container-3:hover{
+                background-color: #8d8a8a;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <div class="top-container">
+            <h1>Event Propogation</h1>
+
+                <!-- container one starts here  -->
+                <div class="container" id="container-1">
+                    container 1
+
+                    <!-- container two starts here  -->
+                    <div class="container" id="container-2">
+                        container 2
+
+                        <!-- container three starts here  -->
+                        <div class="container" id="container-3">
+                            container 3
+                        </div>
+
+                    </div>
+                </div>
+        </div>
+
+        <script>
+           
+           var containers = document.getElementsByClassName('container'); // 3 containers
+
+
+           for(var i =0;i< containers.length;i++){ 
+              containers[i].addEventListener('click', displayEventPhase, true); // all 3 containers eventlistener
+              containers[i].addEventListener('click', displayEventPhase, false); // 3 container
+           }
+
+           function displayEventPhase(e){
+            var phase = e.eventPhase;
+            if(1 === phase){ // container 1 room  & container 2 
+                phase = 'Capturing';
+            } else if(2 === phase) { // container 3 ok this is where the event is triggered
+                phase = 'At Target';
+            } else if(3 === phase) { // container 2 && container 1 bubbling 
+                phase = 'Bubbling';
+            }
+
+            console.log(this.id + ' - ' + phase);
+
+           }
+
+        //    1 stands for Captureing state
+
+        //    2 stands for Target state
+
+        //    3 stands for bubbling
+
+        </script>
+    </body>
+</html>
